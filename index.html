@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="header" id="myHeader">
+    <div class="header" id = "MyHeader">
         <a href="index.html"> Home </a>
     </div>  
     <div class="profile">
@@ -23,7 +23,7 @@
         <p> <b>Major:</b> Computer Science  
     </div>
 
-    <div class = "divider">
+    <div class = "divider" id = "First">
         <h1>AWS</h1>
     </div>
     <div class = "Team">
@@ -46,23 +46,79 @@
     </div>
 
     <div class = "Projectlist">
-        <ul>
-        <li>
-            <b>ADA: </b>I made a Djikstra & A* algorithm visualization and the comparisons
-        </li>
-        <li>
-            <b>DBMS: </b>I made an event ticketing management system & a feature to buy the tickets as the user
-        </li>
-        <li>
-            <b>FoDS: </b>I made a machine learning prediction for stroke and based it on whether or not BMI is related to it
-        </li>
-
-    </ul>
+        <div class="type" id="FoDS">
+            <div class="head"> FoDS </div>
+            <img src="images/FoDS.png" alt="">
+            <div class="content"> <p> A machine learning prediction for stroke and based it on whether or not BMI is related to it </p> </div>
+        </div>
+        <div class="type" id="ADA">
+            <div class="head"> ADA </div>
+            <img src="images/ADA.png">
+            <div class="content">
+                <p>A Djikstra & A* algorithm visualization and the comparisons</p>
+            </div>
+        </div>
+        <div class="type" id="DBMS">
+            <div class="head"> DBMS </div>
+            <img src="images/DBMS.png" alt="">
+            <div class="content">
+                <p> An event ticketing management system & a feature to buy the tickets as the user </p>
+            </div>
+        </div>
     </div>
 
     <div class = "divider">
         <h1>Experiences</h1>
     </div>
-</body>
 
+    <div class = "Experiencelist">
+        <ul>
+            <li>
+                <b>Python</b> (Most used)
+            </li>
+            <li>
+                <b>HTML, CSS, JavaScript</b>
+            </li>
+            <li>
+                <b>Machine Learning</b> (For FoDS Final Project)
+            </li>
+            <li>
+                <b>Java</b> (A tiny bit)
+            </li>
+            <li>
+                <b>Cpp</b> (A tiny bit)
+            </li>
+            <li>
+                <b>MySQL</b> (Used for DBMS Final Project)
+            </li>
+        </ul>
+    </div>
+
+    <div class = "divider">
+        <h1>Final Project</h1>
+    </div>
+
+    <div class = "FinalProject">
+        <h1>
+            The Plan
+        </h1>
+        <div class = "text">
+            For the final project, my team and I are planning to recreate / rework the official <a href = "http://library.binus.ac.id/">BINUS library website</a>
+        </div>
+    </div>
+</body>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("MyHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+</script>
 </html>
